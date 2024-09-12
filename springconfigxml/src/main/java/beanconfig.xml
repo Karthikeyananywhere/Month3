@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="intern" class="fc.springconfigxml.bean.Intern">
+  <!--   <property name="internName" value="Karthikeyan"/>
+    <property name="designation" value="FullStackIntern"/>
+    <property name="team" value="Branding"/>   --> 
+    <constructor-arg index="0" value="Karthikeyan"/> 
+    <constructor-arg index="1" value="FullStackIntern"/> 
+    <constructor-arg index="2" value="Branding"/> 
+    </bean>
+
+<bean id="company" class="fc.springconfigxml.bean.FullCreative" autowire="constructor" init-method="display" destroy-method="close">
+<!-- <property name="location" value="Ascendas IT Park"/>
+<property name="city" value="Chennai"/> -->
+<!-- <property name="intern" ref="intern"/>  -->
+
+<constructor-arg index="0" value="Ascendas IT Park"/>
+<constructor-arg index="1" value="Chennai"/>
+<!-- <constructor-arg ><ref bean="intern"/></constructor-arg>
+ -->
+</bean>
+
+</beans>
